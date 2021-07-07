@@ -26,3 +26,9 @@ $router->get('/publikasi/{id}', 'PublikasiController@show');
 $router->put('/publikasi/{id}', 'PublikasiController@update');
 $router->delete('/publikasi/{id}', 'PublikasiController@destroy');
 
+
+$router->get('/patnership', 'PatnershipController@index');
+$router->post('/patnership', 'PatnershipController@store');
+$router->get('/patnership/{id}', 'PatnershipController@show');
+$router->put('/patnership/{id}', 'PatnershipController@update');
+$router->delete('/patnership/{id}', 'PatnershipController@destroy');
