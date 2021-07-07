@@ -7,17 +7,28 @@ use Illuminate\Support\Facades\Http;
 
 class ServicePublikasi
 {
+    private $url = "https://boiling-savannah-93407.herokuapp.com/publikasi";
 
-    public function getPublikasi()
+    public function getPublication()
     {
-        return Http::get('https://boiling-savannah-93407.herokuapp.com/publikasi');
+        return Http::get($this->url);
     }
-    public function addPublikasi()
+    public function addPublication()
     {
-        return Http::post('https://boiling-savannah-93407.herokuapp.com/publikasi');
+        return Http::post($this->url);
     }
-    public function editPublikasi($id)
+
+    public function showOnePublication($id)
     {
-        return Http::post('https://boiling-savannah-93407.herokuapp.com/publikasi');
+        return Http::get($this->url . '/' . $id);
+    }
+
+    public function updatePublication($id)
+    {
+        return Http::put($this->url . '/' . $id);
+    }
+    public function deletePublication($id)
+    {
+        return Http::delete($this->url . '/' . $id);
     }
 }

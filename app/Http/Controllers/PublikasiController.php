@@ -22,7 +22,7 @@ class PublikasiController extends Controller
 
     public function index()
     {
-        return json_decode($this->publikasiService->getPublikasi(),true);
+        return json_decode($this->publikasiService->getPublication(), true);
     }
 
     /**
@@ -42,7 +42,7 @@ class PublikasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return json_decode($this->publikasiService->addPublication(), true);
     }
 
     /**
@@ -53,7 +53,7 @@ class PublikasiController extends Controller
      */
     public function show($id)
     {
-        //
+        return json_decode($this->publikasiService->showOnePublication($id), true);
     }
 
     /**
@@ -64,7 +64,6 @@ class PublikasiController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -76,7 +75,7 @@ class PublikasiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return json_decode($this->publikasiService->updatePublication($id), true);
     }
 
     /**
@@ -87,6 +86,6 @@ class PublikasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return json_decode($this->publikasiService->deletePublication($id), true);
     }
 }

@@ -14,5 +14,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-
 $router->get('/publikasi', 'PublikasiController@index');
+$router->post('/publikasi', 'PublikasiController@store');
+$router->get('/publikasi/{id}', 'PublikasiController@show');
+$router->put('/publikasi/{id}', 'PublikasiController@update');
+$router->delete('/publikasi/{id}', 'PublikasiController@destroy');
